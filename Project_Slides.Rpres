@@ -1,0 +1,34 @@
+Student GPA Prediction for Alpha College of Engineering
+========================================================
+author: James Chen
+date: 6/23/2014
+
+Date Elements for Predicted Model
+========================================================
+
+
+SATMATH: 	SAT Math score (300-800)
+
+SATBERT: 	SAT Verb score (300-800)
+
+HSPCT: 		High school ranks percentile 
+					(1 - 99: Higher the better) 
+
+Gender: 	1 (Male) 0 (Female)
+
+
+GPA Predicted Model
+=======================================================
+GPA = 1.6228315 + (0.0007011 * satmath) + 
+      (0.0000109 * satverb) + (1.0525877 * hspct) +
+      (0.0898917 *gender)
+
+R codes
+========================================================
+```{r, echo=FALSE}
+
+#install.packages("shiny")
+library(shiny)
+
+runApp(display.mode='showcase')
+```
